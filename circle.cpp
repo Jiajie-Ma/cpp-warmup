@@ -7,8 +7,6 @@
 #include "circle.h"
 #include <math.h>
 
-using namespace std;
-
 // default constructor
 Circle::Circle(){ radius = 0; } 
 
@@ -19,7 +17,7 @@ Circle::Circle(float r){
           throw "WARNING: radius of a circle is supposed to be nonnegative!";
       }
    } catch (const char* msg) {
-      cout << msg << endl;
+      std::cout << msg << std::endl;
    }
 
     radius = r; 
@@ -32,7 +30,7 @@ Circle::Circle(const Circle& obj){ radius = obj.radius; }
 void Circle::operator=(const Circle& obj){ radius = obj.radius; }
 
 // output stream operator
-ostream& operator<<( ostream& output, const Circle& obj ){
+std::ostream& operator<<( std::ostream& output, const Circle& obj ){
     output << obj.radius;
     return output;
 }

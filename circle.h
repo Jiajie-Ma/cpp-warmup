@@ -6,8 +6,6 @@
 #pragma once
 #include <iostream>
 
-using namespace std;
-
 class Circle
 {
 public:
@@ -15,7 +13,7 @@ public:
    Circle(float r); // constructor taking a radius as argument
    Circle(const Circle& obj); // copy constructor
    void operator = (const Circle &obj); // assignment operator
-   friend ostream &operator<<(ostream& output, const Circle& obj); // output stream operator
+   friend std::ostream &operator<<(std::ostream& output, const Circle& obj); // output stream operator
    Circle operator+(const Circle& obj); // add operator
    float getRadius(); // accessor for radius
    void setRadius(float r); // mutator for radius
