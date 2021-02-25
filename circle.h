@@ -12,7 +12,7 @@ public:
    Circle(); // default constructor
    Circle(float r); // constructor taking a radius as argument
    Circle(const Circle& obj); // copy constructor
-   void operator = (const Circle &obj); // assignment operator
+   Circle& operator = (const Circle &obj); // assignment operator
    friend std::ostream &operator<<(std::ostream& output, const Circle& obj); // output stream operator
    Circle operator+(const Circle& obj); // add operator
    float getRadius(); // accessor for radius

@@ -27,7 +27,10 @@ Circle::Circle(float r){
 Circle::Circle(const Circle& obj){ radius = obj.radius; }
 
 // assignment operator
-void Circle::operator=(const Circle& obj){ radius = obj.radius; }
+Circle& Circle::operator=(const Circle& obj){ 
+    radius = obj.radius; 
+    return *this;
+}
 
 // output stream operator
 std::ostream& operator<<( std::ostream& output, const Circle& obj ){
